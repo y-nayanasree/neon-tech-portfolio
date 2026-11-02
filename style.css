@@ -1,0 +1,170 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #090b10;
+  color: #f2f5f4;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 9%;
+  border-bottom: 1px solid #252a30;
+  position: sticky;
+  top: 0;
+  background: #090b10;
+  z-index: 10;
+}
+
+.logo {
+  color: #b7ff4a;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo span, .hero h1 span {
+  color: #b7ff4a;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #b7ff4a;
+}
+
+section {
+  padding: 85px 10%;
+}
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: radial-gradient(circle at 80% 40%, #172b20, #090b10 55%);
+}
+
+.tag {
+  color: #b7ff4a;
+  letter-spacing: 3px;
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 7vw, 72px);
+  line-height: 1.2;
+}
+
+.hero h2 {
+  color: #b7ff4a;
+  margin: 15px 0;
+}
+
+.hero p:not(.tag) {
+  max-width: 550px;
+  color: #aeb5b1;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 11px 20px;
+  margin: 8px 8px 0 0;
+  color: #090b10;
+  background: #b7ff4a;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #d2ff91;
+  transform: translateY(-2px);
+}
+
+section h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+section > p:not(.tag) {
+  color: #b4bdb8;
+  max-width: 750px;
+}
+
+.cards, .projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.cards div, article {
+  background: #121820;
+  border: 1px solid #29362d;
+  padding: 25px;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+.cards div:hover, article:hover {
+  border-color: #b7ff4a;
+  transform: translateY(-5px);
+}
+
+article small {
+  color: #b7ff4a;
+}
+
+article h3 {
+  margin: 15px 0;
+}
+
+article p {
+  color: #aeb5b1;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #252a30;
+  color: #929a95;
+}
+
+@media(max-width: 650px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  section {
+    padding: 60px 7%;
+  }
+}
